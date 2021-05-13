@@ -21,7 +21,7 @@ function FileUpload(props) {
             .then(response => {
                 if(response.data.success) {
                     setImages([...Images, response.data.filePath]) // 원래 이미지와 새로운 이미지 추가
-                    props.refreshFunction([...Images, response.data.filePath])
+                    props.refreshFunction([...Images, response.data.filePath]) //부모에게 props전달
                 } else {
                     console.log('파일 저장 실패')
                 }
@@ -33,7 +33,7 @@ function FileUpload(props) {
         let newImages = [...Images]
         newImages.splice(currentIndex, 1)
         setImages(newImages)
-        props.refreshFunction(newImages)
+        props.refreshFunction(newImages) //부모에게 props전달
     }
     return (
         <div style={{ display: 'flex', justifyContent:'space-between'}}>

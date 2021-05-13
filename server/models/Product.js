@@ -27,12 +27,25 @@ const productSchema = mongoose.Schema({
         maxlength: 100,
         default: 0
     },
+    continents: {
+        type: Number,
+        default: 1
+    },
     views: {
         type: Number,
         default: 0
     }
 },  {timestamps: true})
 
+productSchema.index({ // mongodb : search 할 때 목록과 중요도
+    title: 'text',
+    description: 'text'
+}, {
+    weights: {
+        titel: 5,
+        description: 1
+    }
+})
 const Product = mongoose.model('Product', productSchema)
 
 module.exports = { Product }

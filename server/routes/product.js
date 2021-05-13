@@ -42,4 +42,61 @@ router.post('/', (req, res) => {
         return res.status(200).json({ success: true})
     })
 })
+
+router.post('/products', (req, res) => {
+  
+  // products collection에 들어 있는 모든 상품 정보를 가져오기
+  let limit = req.body.limit ? parseInt(req.body.limit) : 20;
+  let skip = req.body.skip ? parseInt(req.body.skip) : 0;
+  let term = req.body.SearchTerm;
+  let findArgs = {};
+  
+
+  for(let key in req.body.filters) {
+
+    console.log(key)
+    if(req.body.filters[key].length > 0 ) {
+          
+          if(key==="price") {
+            findArgs[key] = {
+              $gte: req.body.filters[key][0], // mongodb=> greater than equal
+              $lte: req.body.filters[key][1] // less than equal
+            }
+          } else {
+            findArgs[key] = req.body.filters[key];
+          }
+    }
+
+  }
+
+  if(term) {
+
+    Product.find(findArgs)
+    .find({ $text: { $search : term}}) // mongodb : searchTerm
+    .populate("writer")
+    .skip(skip) // 시작
+    .limit(limit) // 끝
+    .exec((err, productInfo) => {
+      if(err) return res.status(400).json({ success: false, err})
+      return res.status(200).json({
+                            success: true, productInfo,
+                            PostSize: productInfo.length})
+    })
+  } else {
+
+    Product.find(findArgs)
+    .populate("writer")
+    .skip(skip) // 시작
+    .limit(limit) // 끝
+    .exec((err, productInfo) => {
+      if(err) return res.status(400).json({ success: false, err})
+      return res.status(200).json({
+                            success: true, productInfo,
+                            PostSize: productInfo.length})
+    })
+  }
+  /* product안에 있는 모든 정보를 찾는다. populate: writer가 현재 알수없는 값으로 들어있는데
+  그 정보를 모두 가져온다. */
+})
+
 module.exports = router;

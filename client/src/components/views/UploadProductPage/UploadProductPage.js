@@ -13,7 +13,7 @@ const Continents = [
     {key: 4, value: "North America"},
     {key: 5, value: "South America"},
     {key: 6, value: "Australia"},
-    {key: 7, value: "Antarctica"},
+    {key: 7, value: "Antarctica"}
 ]
 
 function UploadProductPage(props) {
@@ -51,7 +51,7 @@ function UploadProductPage(props) {
             title: Title,
             description: Description,
             price: Price,
-            images: Images,
+            image: Images,
             continents: Continent
         }
 
