@@ -99,4 +99,23 @@ router.post('/products', (req, res) => {
   그 정보를 모두 가져온다. */
 })
 
+router.get('/products_by_id', (req, res) => {
+
+  let type = req.query.type
+  let productId = req.query.id
+
+
+  // productId를 이용하여 DB에서 productId와 같은 상품의 정보를 가져온다.
+  // 쿼리를 이용해서 가져올땐 req.body 하는것이 아니라  req.query
+
+  Product.find({ _id: productId})
+    .populate('writer')
+    .exec((err, product) => {
+      if(err) return res.status(400).send(err)
+      return res.status(200).send({success: true , product})
+    })
+
+})
+
+
 module.exports = router;
