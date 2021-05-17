@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { FaCode } from "react-icons/fa";
 import axios from "axios";
 import { Icon, Col, Card, Row} from 'antd';
 import Meta from 'antd/lib/card/Meta';
