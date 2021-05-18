@@ -30,7 +30,7 @@ const userSchema = mongoose.Schema({
         type:Array,
         default: []
     },
-    history: {
+history: {
         type: Array,
         default: []
     },
