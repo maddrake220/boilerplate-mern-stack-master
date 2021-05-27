@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/boilerplate-mern-stack-master/static/css/main.e6ef8a5a.chunk.css",
-    "main.js": "/boilerplate-mern-stack-master/static/js/main.29e4a281.chunk.js",
-    "main.js.map": "/boilerplate-mern-stack-master/static/js/main.29e4a281.chunk.js.map",
+    "main.js": "/boilerplate-mern-stack-master/static/js/main.2fa42daa.chunk.js",
+    "main.js.map": "/boilerplate-mern-stack-master/static/js/main.2fa42daa.chunk.js.map",
     "runtime-main.js": "/boilerplate-mern-stack-master/static/js/runtime-main.1e0d6e30.js",
     "runtime-main.js.map": "/boilerplate-mern-stack-master/static/js/runtime-main.1e0d6e30.js.map",
     "static/css/2.aeeb65b5.chunk.css": "/boilerplate-mern-stack-master/static/css/2.aeeb65b5.chunk.css",
-    "static/js/2.7a4516c4.chunk.js": "/boilerplate-mern-stack-master/static/js/2.7a4516c4.chunk.js",
-    "static/js/2.7a4516c4.chunk.js.map": "/boilerplate-mern-stack-master/static/js/2.7a4516c4.chunk.js.map",
+    "static/js/2.56808c0a.chunk.js": "/boilerplate-mern-stack-master/static/js/2.56808c0a.chunk.js",
+    "static/js/2.56808c0a.chunk.js.map": "/boilerplate-mern-stack-master/static/js/2.56808c0a.chunk.js.map",
     "index.html": "/boilerplate-mern-stack-master/index.html",
-    "precache-manifest.8eaf4b84e1321f88b00fdc9fc91badfd.js": "/boilerplate-mern-stack-master/precache-manifest.8eaf4b84e1321f88b00fdc9fc91badfd.js",
+    "precache-manifest.ae4366c543385b762a3b67fff9777bfd.js": "/boilerplate-mern-stack-master/precache-manifest.ae4366c543385b762a3b67fff9777bfd.js",
     "service-worker.js": "/boilerplate-mern-stack-master/service-worker.js",
     "static/css/2.aeeb65b5.chunk.css.map": "/boilerplate-mern-stack-master/static/css/2.aeeb65b5.chunk.css.map",
     "static/css/main.e6ef8a5a.chunk.css.map": "/boilerplate-mern-stack-master/static/css/main.e6ef8a5a.chunk.css.map",
-    "static/js/2.7a4516c4.chunk.js.LICENSE.txt": "/boilerplate-mern-stack-master/static/js/2.7a4516c4.chunk.js.LICENSE.txt"
+    "static/js/2.56808c0a.chunk.js.LICENSE.txt": "/boilerplate-mern-stack-master/static/js/2.56808c0a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1e0d6e30.js",
     "static/css/2.aeeb65b5.chunk.css",
-    "static/js/2.7a4516c4.chunk.js",
+    "static/js/2.56808c0a.chunk.js",
     "static/css/main.e6ef8a5a.chunk.css",
-    "static/js/main.29e4a281.chunk.js"
+    "static/js/main.2fa42daa.chunk.js"
   ]
 }
