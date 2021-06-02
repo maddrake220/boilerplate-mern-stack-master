@@ -10,8 +10,8 @@ function ProductImage(props) {
                 
             props.detail.image.map(item => (
                     images.push({
-                        original: `http://localhost:5000/${item}`,
-                        thunbnail: `http://localhost:5000/${item}`
+                        original: `https://madzon.herokuapp.com/${item}`,
+                        thunbnail: `https://madzon.herokuapp.com/${item}`
                     })
     ))
             setImages(images)
